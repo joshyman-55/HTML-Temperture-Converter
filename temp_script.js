@@ -80,7 +80,7 @@ const colors = {
     "Hot": "#FF0000",
     "Scorched": "#ff66cc", 
     "Inferno": "#800000",
-    "Hellsurge": "#22150C"
+    "Hellsurge": "#580000"
 };
 
 convertBtn.addEventListener('click', () => {
