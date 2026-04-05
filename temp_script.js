@@ -58,7 +58,7 @@ function getStatus(f) {
     if (f <= 0) return "Bitter";
     if (f <= 32) return "Frigid";
     if (f < 50) return "Cold";
-    if (f < 60) return "Chilly";
+    if (f < 60) return "Chilly"; 
     if (f <= 77) return "Ideal";
     if (f <= 95) return "Warm";
     if (f <= 122) return "Hot";
