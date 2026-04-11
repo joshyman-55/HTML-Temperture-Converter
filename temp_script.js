@@ -59,10 +59,10 @@ function getStatus(f) {
     if (f <= 32) return "Frigid";
     if (f < 50) return "Cold";
     if (f < 60) return "Chilly"; 
-    if (f <= 77) return "Ideal";
-    if (f <= 95) return "Warm";
-    if (f <= 122) return "Hot";
-    if (f <= 212) return "Scorched";
+    if (f <= 77) return "Warm";
+    if (f <= 95) return "Hot";
+    if (f <= 122) return "Scorched";
+    if (f <= 212) return "Scalding";
     if (f <= 500) return "Inferno";
     return "Hellsurge";
 }
@@ -75,10 +75,10 @@ const colors = {
     "Frigid": "#8601af", 
     "Cold": "#0000FF",
     "Chilly": "#00FF00", 
-    "Ideal": "#FFFF00", 
-    "Warm": "#FFA500", 
-    "Hot": "#FF0000",
-    "Scorched": "#ff66cc", 
+    "Warm": "#FFFF00", 
+    "Hot": "#FFA500", 
+    "Scorched": "#FF0000",
+    "Scalding": "#ff66cc", 
     "Inferno": "#800000",
     "Hellsurge": "#580000"
 };
@@ -112,7 +112,7 @@ convertBtn.addEventListener('click', () => {
     const status = getStatus(f);
     body.style.backgroundColor = colors[status];
 
-    const isDark = ["Hot", "Frigid", "Cold", "Inferno", "Bitter", "Zero", "Polar", "Cryogenic", "Hellsurge"].includes(status);
+    const isDark = ["Scorched", "Frigid", "Cold", "Inferno", "Bitter", "Zero", "Polar", "Cryogenic", "Hellsurge"].includes(status);
     const textCol = isDark ? "white" : "black";
     resultLabel.style.color = textCol;
     promptLabel.style.color = textCol;
