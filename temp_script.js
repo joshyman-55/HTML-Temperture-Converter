@@ -112,7 +112,7 @@ convertBtn.addEventListener('click', () => {
     const status = getStatus(f);
     body.style.backgroundColor = colors[status];
 
-    const isDark = ["Scorched", "Frigid", "Cold", "Inferno", "Bitter", "Zero", "Polar", "Cryogenic", "Hellsurge"].includes(status);
+    const isDark = ["Hot", "Frigid", "Cold", "Inferno", "Bitter", "Zero", "Polar", "Cryogenic", "Hellsurge"].includes(status);
     const textCol = isDark ? "white" : "black";
     resultLabel.style.color = textCol;
     promptLabel.style.color = textCol;
