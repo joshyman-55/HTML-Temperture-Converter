@@ -59,10 +59,10 @@ function getStatus(f) {
     if (f <= 32) return "Frigid";
     if (f < 50) return "Cold";
     if (f < 60) return "Chilly"; 
-    if (f <= 77) return "Warm";
-    if (f <= 95) return "Hot";
-    if (f <= 122) return "Scorched";
-    if (f <= 212) return "Scalding";
+    if (f <= 77) return "Mild";
+    if (f <= 95) return "Warm";
+    if (f <= 122) return "Hot";
+    if (f <= 212) return "Scorched";
     if (f <= 500) return "Inferno";
     return "Hellsurge";
 }
@@ -75,10 +75,10 @@ const colors = {
     "Frigid": "#8601af", 
     "Cold": "#0000FF",
     "Chilly": "#00FF00", 
-    "Warm": "#FFFF00", 
-    "Hot": "#FFA500", 
-    "Scorched": "#FF0000",
-    "Scalding": "#ff66cc", 
+    "Mild": "#FFFF00", 
+    "Warm": "#FFA500", 
+    "Hot": "#FF0000",
+    "Scorched": "#ff66cc", 
     "Inferno": "#800000",
     "Hellsurge": "#580000"
 };
