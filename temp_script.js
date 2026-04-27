@@ -64,7 +64,7 @@ function getStatus(f) {
     if (f <= 122) return "Hot";
     if (f <= 212) return "Scorched";
     if (f <= 500) return "Convection";
-    if (f <= 999) return "Blazing"
+    if (f <= 932) return "Blazing";
     return "Inferno";
 }
 
@@ -82,7 +82,7 @@ const colors = {
     "Scorched": "#FF0000", 
     "Convection": "#800000",
     "Blazing": "#580000",
-    "Inferno": "#181818"
+    "Inferno": "#1f2020"
 };
 
 convertBtn.addEventListener('click', () => {
