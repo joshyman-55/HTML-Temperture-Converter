@@ -54,7 +54,7 @@ const Convert = {
 function getStatus(f) {
     if (f <= -459) return "Zero";
     if (f <= -238) return "Cryogenic";
-    if (f <= -94) return "Glacial";
+    if (f <= -85) return "Glacial";
     if (f <= 0) return "Bitter";
     if (f <= 32) return "Frigid";
     if (f < 50) return "Cold";
