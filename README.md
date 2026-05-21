@@ -13,21 +13,22 @@ A simple web app that converts temperatures across all four major scales with a 
 
 ## Temperature Statuses
 
-| Status | Fahrenheit Range |
-|---|---|
-| Zero | ≤ −459 °F |
-| Cryogenic | −458 to −238 °F |
-| Polar | −237 to −58 °F |
-| Bitter | −57 to 0 °F |
-| Frigid | 1 to 32 °F |
-| Cold | 33 to 49 °F |
-| Chilly | 50 to 59 °F |
-| Ideal | 60 to 77 °F |
-| Warm | 78 to 95 °F |
-| Hot | 96 to 122 °F |
-| Scorched | 123 to 212 °F |
-| Inferno | 213 to 500 °F |
-| Hellsurge | > 500 °F |
+| Classification | Temperature Range (°F / °C) | Color | Meaning |
+|--------------|-----------------------------|------|--------|
+| Zero | -460 to -459°F / -273°C | ⚫ Black | Absolute zero |
+| Cryogenic | -458 to -238°F / -272 to -150°C | 🟣 Deep Purple | Extremely cold |
+| Glacial | -238 to -85°F / -150 to -65°C | 🟪 Indigo | Harsh frozen |
+| Bitter | -84 to -4°F / -64 to -20°C | 🟣 Purple | Severe cold |
+| Frigid | -3 to 32°F / -19 to 0°C | 🟣 Purple | Freezing conditions |
+| Cold | 33 to 49°F / 1 to 9°C | 🔵 Blue | Cold weather |
+| Chilly | 50 to 59°F / 10 to 15°C | 🟢 Green | Cool and mild |
+| Ideal | 60 to 77°F / 16 to 25°C | 🟡 Yellow | Comfortable temperature |
+| Warm | 78 to 95°F / 26 to 35°C | 🟠 Orange | Warm conditions |
+| Hot | 96 to 122°F / 36 to 50°C | 🔴 Red | High heat |
+| Scorched | 123 to 212°F / 51 to 100°C | 🔴 Red | Extreme heat |
+| Convection | 213 to 500°F / 101 to 260°C | 🧱 Maroon | Dangerous heat |
+| Blazing | 501 to 932°F / 261 to 500°C | 🧱 Dark Red | Brutal heat |
+| Inferno | ≥ 933°F  / ≥ 501°C | ⚫️ Near Black | Cremation |
 
 ## Usage
 
