@@ -94,7 +94,7 @@ convertBtn.addEventListener('click', () => {
 
     if ((unit === "Kelvin" || unit === "Rankine") && val < 0) val = 0;
     else if (unit === "Celsius" && val < -273) val = -273;
-    else if (unit === "Fahrenheit" && val < -460) val = -460;
+    else if (unit === "Fahrenheit" && val < -459) val = -459;
 
     inputField.value = new Intl.NumberFormat('en-US').format(val);
 
