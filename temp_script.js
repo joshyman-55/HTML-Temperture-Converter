@@ -45,8 +45,8 @@ const Convert = {
     kToC: (k) => Math.round(k - 273.15),
     fToK: (f) => Convert.cToK(Convert.fToC(f)),
     kToF: (k) => Convert.cToF(Convert.kToC(k)),
-    fToR: (f) => Math.round(f + 459.67),
-    rToF: (r) => Math.round(r - 459.67),
+    fToR: (f) => Math.floor(f + 459.67),
+    rToF: (r) => Math.floor(r - 459.67),
     rToC: (r) => Convert.fToC(Convert.rToF(r)),
     rToK: (r) => Convert.fToK(Convert.rToF(r))
 };
