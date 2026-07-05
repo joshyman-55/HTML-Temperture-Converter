@@ -55,7 +55,7 @@ function getStatus(f) {
     if (f <= -459) return "Zero";
     if (f <= -238) return "Cryogenic";
     if (f <= -85) return "Glacial";
-    if (f <= 0) return "Bitter";
+    if (f <= -4) return "Bitter";
     if (f <= 32) return "Frigid";
     if (f < 50) return "Cold";
     if (f < 60) return "Chilly"; 
