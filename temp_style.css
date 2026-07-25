@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     /* Font changed to Roboto */
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
     /* Changed from white to light gray for initial screen */
     background-color: #e0e0e0; 
     transition: background-color 0.4s ease;
