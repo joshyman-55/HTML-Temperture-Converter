@@ -23,9 +23,15 @@ body {
     border-radius: 15px;
 }
 
-#inputField {
-    max-width: 200px;
-    padding: 8px;
+.unit-input-wrap {
+    position: relative;
+    width: 200px;
+}
+
+.unit-input-wrap input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 40px 8px 8px;
     text-align: center;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
@@ -33,11 +39,25 @@ body {
     border-radius: 5px;
 }
 
-#unitBox, #convertBtn {
+#outputField {
+    background-color: #f2f2f2;
+}
+
+.unit-abbr {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #4a90e2;
+    pointer-events: none;
+}
+
+#fromUnit, #toUnit, #convertBtn {
     font-family: 'Roboto', sans-serif;
 }
 
-#unitBox {
+#fromUnit, #toUnit {
     width: 160px;
     padding: 6px;
 }
