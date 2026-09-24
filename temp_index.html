@@ -11,6 +11,15 @@
 </head>
 <body>
     <div id="appContainer" class="vbox">
+        <div class="decimal-row">
+            <label id="decimalPrompt" for="decimalSelect">Decimal Places:</label>
+            <select id="decimalSelect">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+
         <label id="prompt">Enter Temperature:</label>
         <div class="unit-input-wrap">
             <input type="text" id="inputField" autocomplete="off">
