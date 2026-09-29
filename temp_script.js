@@ -13,7 +13,7 @@ const decimalPromptLabel = document.getElementById('decimalPrompt');
 const body = document.body;
 let lastStatus = null;
 
-const abbr = { Fahrenheit: "°F", Celsius: "°C", Kelvin: "K", Rankine: "°R" };
+const abbr = { Fahrenheit: "°F", Celsius: "°C", Kelvin: "K", Rankine: "°Ra" };
 
 function updateAbbrs() {
     fromAbbr.textContent = abbr[fromUnit.value];
@@ -140,16 +140,16 @@ function getStatus(f) {
     if (f <= -459) return "Zero";
     if (f <= -238) return "Cryogenic";
     if (f <= -85) return "Glacial";
-    if (f <= -4) return "Bitter";
+    if (f <= -1) return "Bitter";
     if (f <= 32) return "Frigid";
     if (f < 50) return "Cold";
     if (f < 60) return "Chilly";
     if (f <= 77) return "Warm";
     if (f <= 95) return "Hot";
     if (f <= 122) return "Sweltering";
-    if (f <= 212) return "Blistering";
-    if (f <= 500) return "Superheated";
-    if (f <= 932) return "Blazing";
+    if (f < 212) return "Blistering";
+    if (f < 500) return "Superheated";
+    if (f < 932) return "Blazing";
     return "Inferno";
 }
 
