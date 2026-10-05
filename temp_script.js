@@ -13,7 +13,7 @@ const decimalPromptLabel = document.getElementById('decimalPrompt');
 const body = document.body;
 let lastStatus = null;
 
-const abbr = { Fahrenheit: "°F", Celsius: "°C", Kelvin: "K", Rankine: "°Ra" };
+const abbr = { Fahrenheit: "°F", Celsius: "°C", Kelvin: "K" };
 
 function updateAbbrs() {
     fromAbbr.textContent = abbr[fromUnit.value];
@@ -100,7 +100,6 @@ function toFahrenheit(value, unit) {
         case "Fahrenheit": return value;
         case "Celsius": return value * 9 / 5 + 32;
         case "Kelvin": return (value - 273.15) * 9 / 5 + 32;
-        case "Rankine": return value - 459.67;
     }
 }
 
@@ -109,7 +108,6 @@ function fromFahrenheit(f, unit) {
         case "Fahrenheit": return f;
         case "Celsius": return (f - 32) * 5 / 9;
         case "Kelvin": return (f - 32) * 5 / 9 + 273.15;
-        case "Rankine": return f + 459.67;
     }
 }
 
@@ -124,7 +122,6 @@ const IntConvert = {
     fToC: (f) => roundInt((f - 32) * (5/9)),
     cToF: (c) => roundInt((c * (9/5)) + 32),
     kToC: (k) => roundInt(k - 273.15),
-    rToF: (r) => roundInt(r - 459.67)
 };
 
 function statusFahrenheit(wholeValue, unit) {
@@ -132,7 +129,6 @@ function statusFahrenheit(wholeValue, unit) {
         case "Fahrenheit": return wholeValue;
         case "Celsius": return IntConvert.cToF(wholeValue);
         case "Kelvin": return IntConvert.cToF(IntConvert.kToC(wholeValue));
-        case "Rankine": return IntConvert.rToF(wholeValue);
     }
 }
 
@@ -196,7 +192,7 @@ convertBtn.addEventListener('click', () => {
 
     // Clamp to absolute zero (rounded up to the chosen precision)
     const minFor = (min) => Math.ceil(min * p - 1e-9) / p;
-    if ((fUnit === "Kelvin" || fUnit === "Rankine") && val < 0) val = 0;
+    if (fUnit === "Kelvin" && val < 0) val = 0;
     else if (fUnit === "Celsius" && val < minFor(-273.15)) val = minFor(-273.15);
     else if (fUnit === "Fahrenheit" && val < minFor(-459.67)) val = minFor(-459.67);
 
@@ -212,7 +208,7 @@ convertBtn.addEventListener('click', () => {
 
     // Color/status comes from the rounded whole-number sibling of the input
     let whole = roundInt(val);
-    if ((fUnit === "Kelvin" || fUnit === "Rankine") && whole < 0) whole = 0;
+    if (fUnit === "Kelvin" && whole < 0) whole = 0;
     else if (fUnit === "Celsius" && whole < -273) whole = -273;
     else if (fUnit === "Fahrenheit" && whole < -459) whole = -459;
     const status = getStatus(statusFahrenheit(whole, fUnit));
